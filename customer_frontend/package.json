@@ -3,9 +3,9 @@
   "type": "module",
   "scripts": {
     "docs::swagger": "node ./swagger.js",
-    "build": "vinix build",
+    "build": "vinxi build",
     "build:docker": "npm run test && npm run build",
-    "start": "vinix start",
+    "start": "vinxi start",
     "start:dev": "vinxi dev",
     "start:docker": "npm run start",
     "lint:fix": "eslint ./src/**/*.{ts,js} --fix",
@@ -33,11 +33,12 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.13",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "@types/jest": "^29.5.13"
+    "ts-node": "^10.9.2"
   }
 }
