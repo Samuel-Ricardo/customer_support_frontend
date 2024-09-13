@@ -23,19 +23,21 @@
   "dependencies": {
     "@solidjs/router": "^0.14.1",
     "@solidjs/start": "^1.0.6",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "solid-js": "^1.8.18",
-    "tailwindcss": "^3.4.3",
-    "vinxi": "^0.4.1",
     "@types/jest": "^29.5.13",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "jest": "^29.7.0",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3"
+    "postcss": "^8.4.38",
+    "prettier": "^3.3.3",
+    "solid-js": "^1.8.18",
+    "tailwindcss": "^3.4.3",
+    "vinxi": "^0.4.1"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "lint-staged": "^15.2.10"
   }
 }
