@@ -2,9 +2,24 @@
   "name": "example-with-tailwindcss",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "docs::swagger": "node ./swagger.js",
+    "build": "vinix build",
+    "build:docker": "npm run test && npm run build",
+    "start": "vinix start",
+    "start:dev": "vinxi dev",
+    "start:docker": "npm run start",
+    "lint:fix": "eslint ./src/**/*.{ts,js} --fix",
+    "lint:staged": "eslint --fix;",
+    "format:fix": "prettier --check --write --ignore-path .gitignore ./src/**/*.{ts,js}",
+    "format:check": "prettier --check --ignore-path .gitignore ./src/**/*.{ts,js}",
+    "test": "jest --passWithNoTests --color",
+    "test:staged": "jest --passWithNoTests --color --findRelatedTests",
+    "test:dev": "jest --watchAll --coverage --passWithNoTests --color",
+    "test:docker": "npm run test:coverage && npm run test:dev",
+    "code:ci": "npm run format:fix && npm run lint:fix && npm run test:coverage",
+    "db:sync": "prisma generate && prisma db push",
+    "husky:setup": "husky init",
+    "prepare": "husky"
   },
   "dependencies": {
     "@solidjs/router": "^0.14.1",
