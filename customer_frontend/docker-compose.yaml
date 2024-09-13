@@ -1,0 +1,6 @@
+services:
+  frontend:
+    image: customer_frontend
+    build: .
+    ports:
+      - 3000:3000
